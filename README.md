@@ -37,7 +37,7 @@ import UIKit
 import Octus
 ```
 #### Supported Tessdata installation
-1. Download and drop ```mrz.trainneddata``` in your project.  
+1. Download and drop ```mrz.trainneddata``` in your project tessdata folder.  
 2. Congratulations! 
 
 ## Usage example
