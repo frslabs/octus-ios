@@ -69,8 +69,8 @@ scanner.dismiss(animated: true, completion: nil)
 }
 ``` 
 
-## Contribute
+## License
 
-We would love you for the contribution to **YourLibraryName**, check the ``LICENSE`` file for more info.
+Octus is available under the FRSLabs license. See the LICENSE file for more info.
 
 
