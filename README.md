@@ -69,7 +69,7 @@ let scanner = IdScannerController(delegate: self)
 ```swift
 class  ViewController: UIViewController, IdScannerControllerDelegate {
     func idScannerController(_ scanner: IdScannerController, didFinishScanningWithResults results: IdScannerResults) {
-        print("OctusResult: ", result)
+        print("OctusResult: ", results.octusResult)
         scanner.dismiss(animated:  true, completion:  nil)
     }
     func  idScannerControllerDidCancel(_ scanner: IdScannerController) {
@@ -86,7 +86,7 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
 
 ```swift
 
-     let resultJson = convertToJson(jsonObject: resultJSONString)
+     let resultJson = convertToJson(jsonObject: results.octusResult)
      let resultDict = convertToDictionary(text: resultJson)
    
      let result = resultDict!["OctusData"] as! [String:String]   
