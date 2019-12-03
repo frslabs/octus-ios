@@ -37,7 +37,7 @@ import UIKit
 import Octus
 ```
 #### Supported Tessdata installation
-1. Download and drop ```mrz.trainneddata``` in your project tessdata folder.  
+1. Download and drop ```model.trainneddata``` in your project.  
 2. Congratulations! 
 
 ## Usage example
@@ -46,26 +46,28 @@ import Octus
 import Octus
 
 let scanner = IdScannerController(delegate: self)
-scanner.modalPresentationStyle = .fullScreen
-scanner.licenceKey = "Your Licence Key"
-scanner.documentType = Document.PAN.rawValue
-scanner.documentCountry = Country.in.rawValue
-scanner.documentSubType = ScanMode.OCR.rawValue
-present(scanner, animated: false)
+    scanner.modalPresentationStyle = .fullScreen
+    scanner.licenceKey = "Your Licence Key"
+    scanner.documentType = Document.PAN.rawValue
+    scanner.documentCountry = Country.in.rawValue
+    scanner.documentSubType = ScanMode.OCR.rawValue
+    present(scanner, animated: false)
 ```
 #### Handling the result
 
 ```swift
-func idScannerController(_ scanner: IdScannerController, didFinishScanningWithResults results: IdScannerResults) {
-print("Octus Result: ", result)
-scanner.dismiss(animated:  true, completion:  nil)
-}
-func  idScannerControllerDidCancel(_ scanner: IdScannerController) {
-scanner.dismiss(animated:  true, completion:  nil)
-}
-func idScannerController(_ scanner: IdScannerController, didFailWithError error: Int{
-print("ErrorCode: ", error)
-scanner.dismiss(animated: true, completion: nil)
+class  ViewController: UIViewController, IdScannerControllerDelegate {
+    func idScannerController(_ scanner: IdScannerController, didFinishScanningWithResults results: IdScannerResults) {
+        print("Octus Result: ", result)
+        scanner.dismiss(animated:  true, completion:  nil)
+    }
+    func  idScannerControllerDidCancel(_ scanner: IdScannerController) {
+        scanner.dismiss(animated:  true, completion:  nil)
+    }
+    func idScannerController(_ scanner: IdScannerController, didFailWithError error:      Int{
+        print("ErrorCode: ", error)
+        scanner.dismiss(animated: true, completion: nil)
+    }
 }
 ``` 
 
