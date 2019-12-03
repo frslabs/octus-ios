@@ -16,6 +16,14 @@ Octus SDK uses advanced deep learning technologies for accurate and fast ID scan
 - [x] Scan duration is very less 
 - [x] MRTD document supported
 
+## Prerequisite
+
+You will need a valid license to use the Octus SDK, which can be obtained by contacting `support@frslabs.com` . 
+
+Depending on the license - offline or online - you have opted for, the ping functionality to billing servers will be disabled or enabled. For instance, if you have opted for the offline SDK model, then there will be no server ping needed to our billing server to bill you. However, if you have chosen a transaction based pricing, then after each transaction, a ping request will be made to our billing server. This cannot be overrided by the App. A point to note is that if the ping transaction fails for any reason, the whole transaction will be void without any results from the SDK.
+
+Once you have the license , follow the below instructions for a successful integration of Octus SDK onto your iOS Application
+
 ## Requirements
 
 - iOS 10.0+
@@ -73,6 +81,86 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
     }
 }
 ``` 
+
+## Octus Result
+
+```swift
+
+     let resultJson = convertToJson(jsonObject: resultJSONString)
+     let resultDict = convertToDictionary(text: resultJson)
+   
+     let result = resultDict!["OctusData"] as! [String:String]   
+     let code = obj["code"]
+     
+     let code = result["code"]
+     let docType = result["documentType"]
+     let name1 = result["name1"] ?? ""
+     let name2 = result["name2"] ?? ""
+     let idNumber = result["number"] ?? ""
+     let dob = result["dob"] ?? ""
+     let yob = result["yob"] ?? ""
+     let country = result ["country"] ?? ""
+     let expiry = result["expiry"] ?? ""
+     let address = result["address"] ?? ""
+     let gender = result["gender"] ?? ""
+     let issuedBy = result["issuedBy"] ?? ""
+     let ifsc = result["ifsc"] ?? ""
+     
+     let imagePathFace = result["facePath"] ?? "" 
+     let imagePathFront = result["frontImagePath"] ?? ""
+     let imagePathBack = result["backImagePath"] ?? ""
+     
+     /// Retrieve image from document directory
+     FileName - 
+     1. Front Image - "doc_front.png"
+     2. Back Image - "doc_back.png"
+     1. Face Image - "doc_face.png"
+      if imagePath.count > 0 {
+           let resultImage = getImageFromDocumentDirectory(imagePath: imagePath, fileName: "fileName")
+           imageView.image = resultImage
+        
+      }
+
+    /// Supported Mathods
+    
+    func convertToJson(jsonObject:NSMutableDictionary) -> String{
+        let jsonData: NSData
+        do {
+            jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options:.prettyPrinted) as NSData
+            let jsonString = (String(data: jsonData as Data, encoding: String.Encoding.utf8))!.replacingOccurrences(of: "\\", with: "")
+            return jsonString
+        } catch _ {
+            print ("JSON Failure")
+        }
+        return ""
+    }
+    
+    func convertToDictionary(text: String) -> [String: Any]? {
+        if let data = text.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
+    }
+    
+    func getImageFromDocumentDirectory(imagePath : String, fileName: String) -> UIImage {
+        let nsDocumentDirectory = FileManager.SearchPathDirectory.documentDirectory
+        let nsUserDomainMask    = FileManager.SearchPathDomainMask.userDomainMask
+        let paths               = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
+        if let dirPath = paths.first{
+            let frontimageURL = URL(fileURLWithPath: dirPath).appendingPathComponent(fileName)
+            let frontimage    = UIImage(contentsOfFile: frontimageURL.path)
+            return frontimage ?? UIImage()
+        }else{
+            return UIImage()
+        }
+        
+    }
+
+```
 
 ## License
 
