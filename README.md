@@ -2,7 +2,10 @@
 # Octus SDK
 > Octus SDK uses advanced deep learning technologies for accurate and fast Document/ID scanning and OCR
 > 
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)]
+[![CI Status](https://img.shields.io/travis/frslabsbot/Octus.svg?style=flat)](https://travis-ci.org/frslabsbot/Octus)
+[![Version](https://img.shields.io/cocoapods/v/Octus.svg?style=flat)](https://cocoapods.org/pods/Octus)
+[![License](https://img.shields.io/cocoapods/l/Octus.svg?style=flat)](https://cocoapods.org/pods/Octus)
+[![Platform](https://img.shields.io/cocoapods/p/Octus.svg?style=flat)](https://cocoapods.org/pods/Octus)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native Android Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
