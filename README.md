@@ -111,12 +111,13 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
      let imagePathBack = result["backImagePath"] ?? ""
      
      /// Retrieve image from document directory
+            
+     let image = getImageFromDocumentDirectory(imagePath: imagePathFace, fileName: "fileName")
+     
      FileName - 
      1. Front Image - "doc_front.png"
      2. Back Image - "doc_back.png"
      1. Face Image - "doc_face.png"
-     
-     let image = getImageFromDocumentDirectory(imagePath: imagePathFace, fileName: "fileName")
      
       if imagePath.count > 0 {
            let resultImage = getImageFromDocumentDirectory(imagePath: imagePath, fileName: "fileName")
