@@ -6,7 +6,7 @@
 
 ![version](https://img.shields.io/badge/pod-v1.0.0-red)
 
-Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native Android Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
+Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native iOS Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
 ## Features
 
@@ -48,8 +48,7 @@ import Octus
 ```
 #### Supported Tessdata installation
 1. Download and drop ```model.trainneddata``` in your project.
-2. Trainneddata can be obtained by contacting `support@frslabs.com`
-3. Congratulations! 
+2. Congratulations! 
 
 ## Usage example
 
@@ -90,7 +89,7 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
      let resultDict = convertToDictionary(text: resultJson)
    
      let result = resultDict!["OctusData"] as! [String:String]   
-     let code = obj["code"]
+     let code = result["code"]
      
      let code = result["code"]
      let docType = result["documentType"]
@@ -114,16 +113,15 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
             
      let image = getImageFromDocumentDirectory(imagePath: imagePathFace, fileName: "fileName")
      
-     FileName - 
-     1. Front Image - "doc_front.png"
-     2. Back Image - "doc_back.png"
-     1. Face Image - "doc_face.png"
+     `FileNames` - 
+         Front Image - "doc_front.png"
+         Back Image - "doc_back.png"
+         Face Image - "doc_face.png"
      
       if imagePath.count > 0 {
            let resultImage = getImageFromDocumentDirectory(imagePath: imagePath, fileName: "fileName")
            imageView.image = resultImage
-        
-      }
+        }
 
     /// Supported Mathods
     
