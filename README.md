@@ -47,8 +47,9 @@ import UIKit
 import Octus
 ```
 #### Supported Tessdata installation
-1. Download and drop ```model.trainneddata``` in your project.  
-2. Congratulations! 
+1. Download and drop ```model.trainneddata``` in your project.
+2. Trainneddata can be obtained by contacting `support@frslabs.com`
+3. Congratulations! 
 
 ## Usage example
 
