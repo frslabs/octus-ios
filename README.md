@@ -58,7 +58,7 @@ let scanner = IdScannerController(delegate: self)
 ```swift
 class  ViewController: UIViewController, IdScannerControllerDelegate {
     func idScannerController(_ scanner: IdScannerController, didFinishScanningWithResults results: IdScannerResults) {
-        print("Octus Result: ", result)
+        print("OctusResult: ", result)
         scanner.dismiss(animated:  true, completion:  nil)
     }
     func  idScannerControllerDidCancel(_ scanner: IdScannerController) {
