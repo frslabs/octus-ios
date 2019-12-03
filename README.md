@@ -186,7 +186,7 @@ Error codes and their meaning are tabulated below
 
 ## Octus Parameters
 
-- `scanner.licenceKey = "KEY"`   ***(Required)***
+- `scanner.licenceKey = "LICENCE KEY"`   ***(Required)***
   
   Accepts the Octus licence key as a `String`
   
