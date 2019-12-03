@@ -28,6 +28,12 @@ Once you have the license , follow the below instructions for a successful integ
 - iOS 10.0+
 - Xcode 11.2
 
+## Permission
+
+In Info.plist file add following code to allow your application to access iPhone's camera:
+<key>NSCameraUsageDescription</key>
+<string>Allow access to camera</string>
+
 ## Installation
 
 #### CocoaPods
