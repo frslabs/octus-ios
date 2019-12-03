@@ -158,7 +158,8 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
             let frontimageURL = URL(fileURLWithPath: dirPath).appendingPathComponent(fileName)
             let frontimage    = UIImage(contentsOfFile: frontimageURL.path)
             return frontimage ?? UIImage()
-        }else{
+        }
+        else {
             return UIImage()
         }
         
