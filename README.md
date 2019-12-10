@@ -8,6 +8,18 @@
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native iOS Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
+# Table Of Content
+- [Features](#Features)
+- [Prerequisite](#prerequisite)
+- [Requirements](#requirements)
+- [Permission](#Permission)
+- [Installation](#installation)
+- [Usage example](#Usage-example)
+- [Octus Result](#Octus-Result)
+- [Octus Parameters](#octus-parameters)
+- [Octus Error Codes](#octus-error-codes)
+- [Help](#help)
+
 ## Features
 
 - [x] Auto scanning domestic and internationals ID cards
