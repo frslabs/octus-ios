@@ -1,8 +1,5 @@
 
 # Octus SDK
-> Octus SDK uses advanced deep learning technologies for accurate and fast Document/ID scanning and OCR
->
->
 
 ![version](https://img.shields.io/badge/pod-v1.0.0-red)
 
