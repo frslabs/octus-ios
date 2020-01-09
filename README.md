@@ -221,8 +221,9 @@ Error codes and their meaning are tabulated below
   | Document.DRV   | Driving Licence        |
   | Document.CQL   | Cheque Leaf            |
   | Document.GST   | GST Form               |
-  | Document.IMG_A | Image Capture Aadhaar  |
-  | Document.IMG_H | Plain Image capture    |
+  | Document.IMG_A | Image Capture Masked Aadhaar  |
+  | Document.IMG_H | Plain Horizontal Image capture   |
+  | Document.IMG_V | Plain Vertical Image capture    |
   
 - `scanner.documentSubType = ScanMode.OCR.rawValue` ***(Required)***  
   
