@@ -70,6 +70,7 @@ let scanner = IdScannerController(delegate: self)
     scanner.documentType = Document.PAN.rawValue
     scanner.documentCountry = Country.in.rawValue
     scanner.documentSubType = ScanMode.OCR.rawValue
+    scanner.documentSide = 1
     present(scanner, animated: false)
 ```
 #### Handling the result
