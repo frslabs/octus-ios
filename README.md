@@ -1,15 +1,14 @@
 
 # Octus SDK
-> Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR
+> Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR.
 >
 ![version](https://img.shields.io/badge/pod-v1.0.0-red)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native iOS Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
 # Table Of Content
-- [Features](#Features)
 - [Prerequisite](#prerequisite)
-- [Requirements](#requirements)
+- [iOS SDK Requirements](#requirements)
 - [Permission](#Permission)
 - [Installation](#installation)
 - [Usage example](#Usage-example)
@@ -17,13 +16,6 @@ Octus SDK uses advanced deep learning technologies for accurate and fast ID scan
 - [Octus Parameters](#octus-parameters)
 - [Octus Error Codes](#octus-error-codes)
 - [Help](#help)
-
-## Features
-
-- [x] Auto scanning domestic and internationals ID cards
-- [x] OCR is highly accurate 
-- [x] Scan duration is very less 
-- [x] MRTD document supported
 
 ## Prerequisite
 
@@ -33,7 +25,7 @@ Depending on the license - offline or online - you have opted for, the ping func
 
 Once you have the license , follow the below instructions for a successful integration of Octus SDK onto your iOS Application
 
-## Requirements
+## iOS SDK Requirements
 
 - iOS 10.0+
 - Xcode 11.2
@@ -130,12 +122,12 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
      let image = getImageFromDocumentDirectory(imagePath: imagePathFace, fileName: "fileName")
      
      `FileNames` - 
-         Front Image - "doc_front.png"
-         Back Image - "doc_back.png"
-         Face Image - "doc_face.png"
+         Front Image - "OCTUS_FILE_FRONT.png"
+         Back Image - "OCTUS_FILE_BACK.png"
+         Face Image - "OCTUS_FILE_FACE.png"
      
       if imagePath.count > 0 {
-           let resultImage = getImageFromDocumentDirectory(imagePath: imagePath, fileName: "fileName")
+           let resultImage = getImageFromDocumentDirectory(imagePath: imagePath, fileName: fileName)
            imageView.image = resultImage
         }
 
