@@ -221,7 +221,7 @@ Error codes and their meaning are tabulated below
   | Document.DRV   | Driving Licence        |
   | Document.CQL   | Cheque Leaf            |
   | Document.GST   | GST Form               |
-  | Document.IMG_A | Image Capture Masked Aadhaar  |
+  | Document.IMG_A | Masked Aadhaar Image Capture  |
   | Document.IMG_H | Plain Horizontal Image capture   |
   | Document.IMG_V | Plain Vertical Image capture    |
   
