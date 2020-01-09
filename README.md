@@ -46,7 +46,7 @@ platform :ios, '13.0'
 source 'https://gitlab.com/frslabs-public/ios/octus.git'
 use_frameworks!
 pod 'Octus'
-pod 'TesseractOCRiOS', '4.0.0'
+pod 'TesseractOCRiOS'
 ```
 
 To get the full benefits import `Octus` wherever you import UIKit
