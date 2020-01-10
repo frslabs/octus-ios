@@ -257,9 +257,7 @@ Error codes and their meaning are tabulated below
   | Document.PAN   | OCR           |      1          |
   | Document.ADR   | OCR, BARCODE  |      2, 1       |
   | Document.VID   | OCR           |      2          | 
-  | Document.NID   | OCR           |      2          |
   | Document.PPT   | MRTD          |      1 OR 2     |   
-  | Document.VSA   | MRTD          |      1          |
   | Document.DRV   | OCR           |      2          |
   | Document.CQL   | OCR           |      1          |
   | Document.GST   | OCR           |      1          |
