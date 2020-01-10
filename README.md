@@ -250,7 +250,7 @@ Error codes and their meaning are tabulated below
   Note: ScanMode.OCR is supported iOS version >= 13.0
   
   
-  - `scanner.documentSide = 1 (or 2)` ***(Required)***
+- `scanner.documentSide = 1 (or 2)` ***(Required)***
   
    Set the document side 1 or 2 according to documentType AND ScanMode
      
