@@ -247,7 +247,7 @@ Error codes and their meaning are tabulated below
   | ScanMode.MRTD.rawValue | Scans the document in MRZ mode  |
   | ScanMode.CROP.rawValue | Scans the document in Crop mode  |
   
-  Note: ScanMode.OCR is supported iOS version >= 13.0
+  Note: ScanMode.OCR is only supported from iOS version 13 and above. For versions below this, please use our APIs.
   
   
 - `scanner.documentSide = 1 (or 2)` ***(Required)***
@@ -267,8 +267,8 @@ Error codes and their meaning are tabulated below
   | Document.IMG_H | CROP          |      2          |
   | Document.IMG_V | CROP          |      2          |
     
-   Note: In case of MRTD, DocumentSide = 2 only applicable for Indian 
-   passport with address
+   Note: In case of MRTD, DocumentSide = 2 is only applicable for Indian passports with address on the back page.
+   
   
 ## Help
 
