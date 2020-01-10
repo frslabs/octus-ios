@@ -247,7 +247,7 @@ Error codes and their meaning are tabulated below
   | ScanMode.MRTD.rawValue | Scans the document in MRZ mode  |
   | ScanMode.CROP.rawValue | Scans the document in Crop mode  |
   
-  Note: ScanMode.OCR supported ios version >= 13.0
+  Note: ScanMode.OCR is supported iOS version >= 13.0
   
   
   - `scanner.documentSide = 1 (or 2)` ***(Required)***
