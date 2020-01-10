@@ -265,7 +265,7 @@ Error codes and their meaning are tabulated below
   | Document.IMG_H | CROP          |      2          |
   | Document.IMG_V | CROP          |      2          |
     
-   Note: In case of MRTD, DocumentSide = 2 only appicable for Indian 
+   Note: In case of MRTD, DocumentSide = 2 only applicable for Indian 
    passport with address
   
 ## Help
