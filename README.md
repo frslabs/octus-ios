@@ -251,6 +251,8 @@ Error codes and their meaning are tabulated below
   - `scanner.documentSide = 1 (or 2)` ***(Required)***
   
    Set the document side 1 or 2 according to documentType AND ScanMode 
+   Note: In case of MRTD, DocumentSide = 2 only appicable for Indian 
+   passport with address
      
   | Value          | ScanMode      |  DocumentSide   |
   | -------------- | ------------- | --------------  |
