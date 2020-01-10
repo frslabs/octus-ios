@@ -178,20 +178,20 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
 
 Error codes and their meaning are tabulated below
 
-| Code          | Message                 |
-| -------------- | ---------------------- |
+| Code          | Message              |
+| ------------- | ------------------- |
 | 801  | Scan timed out                |
-| 802  | Invalid ID parameters passed|
-| 803  | Camera permission denied    |
-| 804  | Scan was interrupted            |
-| 805  | Octus SDK License got expired             |
-| 806  | Octus SDK License was invalid             |
-| 807  | Invalid camera resolution   |
-| 811  | QR not detected             |
-| 812  | QR parsing failed           |
-| 108  | Internet Unavailable                 |
-| 401  | Api Limit Exceeded            |
-| 429  | Too many request            |
+| 802  | Invalid ID parameters passed  |
+| 803  | Camera permission denied      |
+| 804  | Scan interrupted              |
+| 805  | License expired               |
+| 806  | License invalid               |
+| 807  | Invalid camera resolution     |
+| 811  | QR not detected               |
+| 812  | QR parsing failed             |
+| 108  | Internet unavailable          |
+| 401  | API limit exceeded            |
+| 429  | Too many requests             |
 
 ## Octus Parameters
 
@@ -248,6 +248,7 @@ Error codes and their meaning are tabulated below
   | ScanMode.CROP.rawValue | Scans the document in Crop mode  |
   
   Note: ScanMode.OCR supported ios version >= 13.0
+  
   
   - `scanner.documentSide = 1 (or 2)` ***(Required)***
   
