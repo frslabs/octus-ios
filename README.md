@@ -248,6 +248,25 @@ Error codes and their meaning are tabulated below
   | ScanMode.MRTD.rawValue | Scans the document in MRZ mode  |
   | ScanMode.CROP.rawValue | Scans the document in Crop mode  |
   
+  - `scanner.documentSide = 1 (or 2)` ***(Required)***
+  
+   Set the document side 1 or 2 according to documentType AND ScanMode 
+     
+  | Value          | ScanMode      |  DocumentSide   |
+  | -------------- | ------------- | --------------  |
+  | Document.PAN   | OCR           |      1          |
+  | Document.ADR   | OCR, BARCODE  |      2, 1       |
+  | Document.VID   | OCR           |      2          | 
+  | Document.NID   | OCR           |      2          |
+  | Document.PPT   | MRTD          |      1 OR 2     |   
+  | Document.VSA   | MRTD          |      1          |
+  | Document.DRV   | OCR           |      2          |
+  | Document.CQL   | OCR           |      1          |
+  | Document.GST   | OCR           |      1          |
+  | Document.IMG_A | CROP          |      2          |
+  | Document.IMG_H | CROP          |      2          |
+  | Document.IMG_V | CROP          |      2          |
+  
 ## Help
 
 For any queries/feedback , contact us at `support@frslabs.com` 
