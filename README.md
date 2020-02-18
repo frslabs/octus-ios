@@ -47,7 +47,7 @@ platform :ios, '13.0'
 source 'https://gitlab.com/frslabs-public/ios/octus.git'
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
-pod 'Octus'
+pod 'Octus','1.0.0'
 pod 'TesseractOCRiOS','4.0.0'
 ```
 
@@ -66,7 +66,7 @@ import Octus
 ```swift
 import Octus
 
-let scanner = IdScannerController(delegate: self)
+    let scanner = IdScannerController(delegate: self)
     scanner.modalPresentationStyle = .fullScreen
     scanner.licenceKey = "Your Licence Key"
     scanner.documentType = Document.PAN.rawValue
