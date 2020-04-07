@@ -204,6 +204,11 @@ Error codes and their meaning are tabulated below
   
   Accepts the Octus licence key as a `String`
   
+- `scanner.isManualScanEnabled = false` ***(Required)***
+
+  `true` - Displays a button used to start the scan when clicked
+  `false` - Automatically starts scanning as soon as camera preview is ready
+  
 - `scanner.documentCountry = Country.countryISOcode.rawValue` ***(Required)***
   
   Sets the country associated with the Document.
@@ -273,6 +278,15 @@ Error codes and their meaning are tabulated below
   | Document.IMG_V | CROP          |      2          |
     
    Note: In case of MRTD, DocumentSide = 2 is only applicable for Indian passports with address on the back page.
+   
+ - `scanner.isOrientationFlat = false`  ***(Optional)*** *(Defaults to **false**)*
+  
+  Sets the value for which the scanner should lock the orientation with respect to the scan surface . Possible values are,
+  
+  | Value               | Effect     |
+  | ------------------- | ---------- |
+  | true  | Scans only when orientation of the phone(camera) is perpendicular(flat) to the scan surface. |
+  | false | Scans ignoring the orientation of the phone(camera) to the scan surface. |  
    
   
 ## Help
