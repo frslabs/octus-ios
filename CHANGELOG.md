@@ -1,5 +1,9 @@
 # Changelog
 
+## **v1.1.0** - *07-04-2020*
+ **Whats New**
+ 
+
 ## **v1.0.0** - *10-01-2020*
  **Initial Release**
  
