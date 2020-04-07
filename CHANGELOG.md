@@ -3,7 +3,7 @@
 ## **v1.1.0** - *07-04-2020*
  ### What’s New
 - Bug fixes.
-- Added manual scanning option.
+- Added manual scan option.
 - Added scan orientation option to avoid scanning with incorrect angles.
 - Added aadhaar masking without OCR.
 - Added capture image only - horizonatal and vertical.
