@@ -69,6 +69,8 @@ import Octus
 let scanner = IdScannerController(delegate: self)
 scanner.modalPresentationStyle = .fullScreen
 scanner.licenceKey = "Your Licence Key"
+scanner.isManualScanEnabled = false
+scanner.isOrientationFlat = false
 scanner.documentType = Document.PAN.rawValue
 scanner.documentCountry = Country.in.rawValue
 scanner.documentSubType = ScanMode.OCR.rawValue
