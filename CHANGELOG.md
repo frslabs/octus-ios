@@ -4,7 +4,7 @@
  ### What’s New
 - Bug fixes.
 - Added manual scanning option.
-- Added scan orientation option to avoid scanning wiht incorrect angles.
+- Added scan orientation option to avoid scanning with incorrect angles.
 - Added aadhaar masking without OCR.
 - Added capture image only - horizonatal and vertical.
  
