@@ -7,6 +7,7 @@
 - Added scan orientation option to avoid scanning with incorrect angles.
 - Added aadhaar masking without OCR.
 - Added capture image only - horizonatal and vertical.
+- Added Passport scan with address page. 
  
 
 ## **v1.0.0** - *10-01-2020*
