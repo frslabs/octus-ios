@@ -1,5 +1,9 @@
 # Changelog
 
+## **v1.1.0** - *14-04-2020*
+ ### Fixed
+- Transaction Api issue addressed.
+
 ## **v1.1.0** - *07-04-2020*
  ### What’s New
 - Bug fixes.
