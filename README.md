@@ -205,7 +205,8 @@ Error codes and their meaning are tabulated below
 | 804  | Scan interrupted              |
 | 805  | License expired               |
 | 806  | License invalid               |
-| 807  | Invalid camera resolution     |
+| 807  | Octus server error            |
+| 808  | Transaction API error         |
 | 811  | QR not detected               |
 | 812  | QR parsing failed             |
 | 108  | Internet unavailable          |
