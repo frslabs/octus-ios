@@ -1,6 +1,12 @@
 # Changelog
 
-## **v1.1.0** - *14-04-2020*
+## **v1.3.0** - *07-05-2020*
+ ### Fixed
+- Added octus API support to ocr documents in below 13 iOS version.
+- Refactoring code. 
+- Imroved scan speed for aadhaar.
+
+## **v1.2.0** - *14-04-2020*
  ### Fixed
 - Transaction Api issue addressed.
 
