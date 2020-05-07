@@ -100,7 +100,8 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
     ///
     /// - Parameters:
     ///   - scanner: The scanner controller object managing the scanning interface.
-    ///   - results: The results of the user scanning with the camera.
+    ///   - results: The results of the user scanning with the camera. 
+    ///   - results.octusResult: return output as NSMutableDictionary.
     /// - Discussion: Your delegate's implementation of this method should dismiss the octus scanner controller.
     func idScannerController(_ scanner: IdScannerController, didFinishScanningWithResults results: IdScannerResults) {
           DispatchQueue.main.async {
@@ -129,7 +130,7 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
             print("ErrorCode: ", error)
         }
     }
-}
+    }
 ``` 
 
 ## Octus Result
