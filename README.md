@@ -28,8 +28,8 @@ Once you have the license , follow the below instructions for a successful integ
 
 ## iOS SDK Requirements
 
-- iOS 10.0+
-- Xcode 11.2
+- iOS 12.0+
+- Xcode 11.4.1
 
 ## Permission
 
