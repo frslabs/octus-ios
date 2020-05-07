@@ -129,8 +129,9 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
           DispatchQueue.main.async {
             print("ErrorCode: ", error)
         }
-    }
-  }
+    }  
+ }
+ 
 ``` 
 
 ## Octus Result
@@ -211,10 +212,9 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
         }
         else {
             return UIImage()
-        }
-        
+        }        
     }
-
+    
 ```
 
 ## Octus Error Codes
