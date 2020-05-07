@@ -130,7 +130,7 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
             print("ErrorCode: ", error)
         }
     }
-    }
+  }
 ``` 
 
 ## Octus Result
