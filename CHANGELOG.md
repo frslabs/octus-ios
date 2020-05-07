@@ -3,8 +3,8 @@
 ## **v1.3.0** - *07-05-2020*
  ### Fixed
 - Added octus API support to ocr documents in below 13 iOS version.
-  > Supported ID Via API - PAN, AADHAAR, VOTER ID.
-  > Native Supported ID - PASSPORT, AADHAAR QR.
+  - Supported ID Via API - PAN, AADHAAR, VOTER ID.
+  - Native Supported ID - PASSPORT, AADHAAR QR.
 - Refactoring code. 
 - Imroved scan speed for aadhaar.
 
