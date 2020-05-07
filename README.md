@@ -63,7 +63,9 @@ login <YOUR_USERNAME>
 password <YOUR_PASSOWRD>
 ```
 3. In terminal enter below command to install the pod
-pod install or pod update 
+pod install or pod update.
+
+4. Connect with physical device to build and run Octus, It will not build/run in simulator due to camera dependency.
 
 To get the full benefits import `Octus` wherever you import UIKit
 
