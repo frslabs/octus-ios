@@ -47,7 +47,7 @@ platform :ios, '13.0'
 source 'https://gitlab.com/frslabs-public/ios/octus.git'
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
-pod 'Octus','1.2.0'
+pod 'Octus','1.3.0'
 pod 'TesseractOCRiOS', :git => 'https://github.com/gali8/Tesseract-OCR-iOS.git'
 ```
 
@@ -82,7 +82,7 @@ import Octus
 
 let scanner = IdScannerController(delegate: self)
 scanner.modalPresentationStyle = .fullScreen
-scanner.licenceKey = "Your Licence Key"
+scanner.licenceKey = "YOUR_LICENCE_KEY"
 scanner.isManualScanEnabled = false
 scanner.isOrientationFlat = false
 scanner.documentType = Document.PAN.rawValue
@@ -95,16 +95,39 @@ present(scanner, animated: false)
 
 ```swift
 class  ViewController: UIViewController, IdScannerControllerDelegate {
+
+    /// Tells the delegate that the user scanned a document.
+    ///
+    /// - Parameters:
+    ///   - scanner: The scanner controller object managing the scanning interface.
+    ///   - results: The results of the user scanning with the camera.
+    /// - Discussion: Your delegate's implementation of this method should dismiss the octus scanner controller.
     func idScannerController(_ scanner: IdScannerController, didFinishScanningWithResults results: IdScannerResults) {
-        print("ScanResult: ", results.octusResult)
-        scanner.dismiss(animated:  true, completion:  nil)
+          DispatchQueue.main.async {
+            print("OctusResult: ", results.octusResult)
+        }      
     }
+    
+    /// Tells the delegate that the user cancelled the scan operation.
+    ///
+    /// - Parameters:
+    ///   - scanner: The scanner controller object managing the scanning interface.
+    /// - Discussion: Your delegate's implementation of this method should dismiss the image scanner controller.
     func  idScannerControllerDidCancel(_ scanner: IdScannerController) {
-        scanner.dismiss(animated:  true, completion:  nil)
+          DispatchQueue.main.async {
+            print("Scan operation cancelled")
+        }
     }
-    func idScannerController(_ scanner: IdScannerController, didFailWithError error:      Int{
-        print("ErrorCode: ", error)
-        scanner.dismiss(animated: true, completion: nil)
+    
+    /// Tells the delegate that an error occured during the user's scanning experience.
+    ///
+    /// - Parameters:
+    ///   - scanner: The scanner controller object managing the scanning interface.
+    ///   - error: The error that occured.
+    func idScannerController(_ scanner: IdScannerController, didFailWithError error: Int{        
+          DispatchQueue.main.async {
+            print("ErrorCode: ", error)
+        }
     }
 }
 ``` 
@@ -202,7 +225,6 @@ Error codes and their meaning are tabulated below
 | 801  | Scan timed out                |
 | 802  | Invalid ID parameters passed  |
 | 803  | Camera permission denied      |
-| 804  | Scan interrupted              |
 | 805  | License expired               |
 | 806  | License invalid               |
 | 807  | Octus server error            |
