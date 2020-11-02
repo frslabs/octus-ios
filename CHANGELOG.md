@@ -1,4 +1,6 @@
 # Changelog
+## **v1.3.3** - *29-10-2020*
+- Bug fixes.
 
 ## **v1.3.0** - *07-05-2020*
  ### Fixed
@@ -6,7 +8,7 @@
   - Supported ID Via API - PAN, AADHAAR, VOTER ID.
   - Native Supported ID - PASSPORT, AADHAAR QR.
 - Refactoring code. 
-- Imroved scan speed for aadhaar.
+- Improved scan speed for aadhaar.
 
 ## **v1.2.0** - *14-04-2020*
  ### Fixed
