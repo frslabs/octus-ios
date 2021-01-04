@@ -1,6 +1,6 @@
 # Changelog
 ## **v1.3.4** - *03-12-2020*
-- Supportig Cheque MICR code.
+- Supporting Cheque MICR code.
 - Bug fixes.
 
 ## **v1.3.3** - *29-10-2020*
