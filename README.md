@@ -327,6 +327,10 @@ Error codes and their meaning are tabulated below
   | ------------------- | ---------- |
   | true  | Scans only when orientation of the phone(camera) is perpendicular(flat) to the scan surface. |
   | false | Scans ignoring the orientation of the phone(camera) to the scan surface. |  
+  
+  ## NOTE
+
+In order to get the Bank details, an API call has to be made to the server to do the MICR lookup and fetch the details.  
    
   
 ## Help
