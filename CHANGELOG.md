@@ -1,4 +1,7 @@
 # Changelog
+## **v1.5.3** - *04-05-2021*
+- Swift version update.
+ 
 ## **v1.5.2** - *22-02-2021*
 - Bug fixes.
 
