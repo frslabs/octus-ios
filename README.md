@@ -26,10 +26,10 @@ Depending on the license - offline or online - you have opted for, the ping func
 
 Once you have the license , follow the below instructions for a successful integration of Octus SDK onto your iOS Application
 
-## iOS SDK Requirements
+## Minimum Requirements
 
+- xcode 12.5
 - iOS 12.0+
-- Xcode 12.4
 
 ## Permission
 
