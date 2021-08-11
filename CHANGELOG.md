@@ -1,5 +1,8 @@
 # Changelog
 
+## **v1.5.5** - *11-08-2021*
+- Bug fixes.
+
 ## **v1.5.4** - *19-07-2021*
 - Bug fixes.
 - Performance ennhancement.
