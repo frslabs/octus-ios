@@ -1,5 +1,8 @@
 # Changelog
 
+## **v1.5.6** - *12-10-2021*
+- Support Xcode 13 version.
+
 ## **v1.5.5** - *11-08-2021*
 - Bug fixes.
 
