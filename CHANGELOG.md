@@ -1,7 +1,7 @@
 # Changelog
 ## **v1.5.7** - *27-12-2021*
 - Swift & Xcode version update.
-- 
+
 ## **v1.5.6** - *12-10-2021*
 - Support Xcode 13 version.
 
