@@ -1,4 +1,7 @@
 # Changelog
+## **v1.5.8** - *24-03-2022*
+- E-mandate document is added.
+
 ## **v1.5.7** - *27-12-2021*
 - Swift & Xcode version update.
 
