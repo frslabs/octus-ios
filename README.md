@@ -164,6 +164,7 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
      let imagePathFace = result["facePath"] ?? "" 
      let imagePathFront = result["frontImagePath"] ?? ""
      let imagePathBack = result["backImagePath"] ?? ""
+     let imagePathCrop = result["croppedImagePath"] ?? ""
      
      /// Retrieve image from document directory
             
@@ -173,6 +174,7 @@ class  ViewController: UIViewController, IdScannerControllerDelegate {
          Front Image - "OCTUS_FILE_FRONT.png"
          Back Image - "OCTUS_FILE_BACK.png"
          Face Image - "OCTUS_FILE_FACE.png"
+         Crop Image - "OCTUS_FILE_CROP.jpg"
      
       if imagePath.count > 0 {
            let resultImage = getImageFromDocumentDirectory(imagePath: imagePath, fileName: fileName)
@@ -274,6 +276,7 @@ Error codes and their meaning are tabulated below
   | Document.IMG_A | Masked Aadhaar Image Capture  |
   | Document.IMG_H | Plain Horizontal Image capture   |
   | Document.IMG_V | Plain Vertical Image capture    |
+  | Document.E_MANDATE | E-mandate Document Capture |
   
 - `scanner.documentSubType = ScanMode.OCR.rawValue` ***(Required)***  
   
@@ -317,6 +320,7 @@ Error codes and their meaning are tabulated below
   | Document.IMG_A | CROP          |      2          |
   | Document.IMG_H | CROP          |      2          |
   | Document.IMG_V | CROP          |      2          |
+  | Document.E_MANDATE | OCR       |      1         |
     
    Note: In case of MRTD, DocumentSide = 2 is only applicable for Indian passports with address on the back page.
    
