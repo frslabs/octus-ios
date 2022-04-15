@@ -1,4 +1,8 @@
 # Changelog
+## **v1.6.0** - *15-04-202*
+- Issue fixes & Improvements.
+- Swift & Xcode 13.3.1 version update.
+
 ## **v1.5.8** - *24-03-2022*
 - E-mandate document is added.
 
