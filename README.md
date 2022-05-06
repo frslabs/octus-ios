@@ -293,8 +293,8 @@ Error codes and their meaning are tabulated below
 
 -  `scanner.isWatermarkNeeded = true/false` ***(Optional)*** (CHEQUE)
 
-    Sets the "CANCELLED" watermark to cheque if it is true.
-    Doesn't set "CANCELLED" watermark to cheque if it false.
+    - Sets the "CANCELLED" watermark to cheque if it is true.
+    - Doesn't set "CANCELLED" watermark to cheque if it false.
    
   
   Possible values for Sub Type are,
