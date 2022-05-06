@@ -92,6 +92,7 @@ scanner.documentType = Document.PAN.rawValue
 scanner.documentCountry = Country.in.rawValue
 scanner.documentSubType = ScanMode.OCR.rawValue
 scanner.documentSide = 1
+scanner.isWatermarkNeeded = true/false (CHEQUE)
 present(scanner, animated: false)
 ```
 #### Handling the result
