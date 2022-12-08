@@ -1,7 +1,7 @@
 
 # OCTUS iOS SDK
 
-![version](https://img.shields.io/badge/version-v1.6.3-blue)
+![version](https://img.shields.io/badge/version-v1.6.4-blue)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native iOS Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
@@ -48,7 +48,7 @@ platform :ios, '13.0'
 source 'https://gitlab.com/frslabs-public/ios/octus.git'
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
-pod 'Octus','1.6.3'
+pod 'Octus','1.6.4'
 pod 'TesseractOCRiOS', :git => 'https://github.com/gali8/Tesseract-OCR-iOS.git'
 ```
 
