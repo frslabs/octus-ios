@@ -1,15 +1,19 @@
 # Changelog
-## **v1.6.4** - *08-12-202*
+## **v1.6.6** - *15-12-2022*
+- Swift & Xcode 14.2 version update.
+- Support from iOS 13.
+
+## **v1.6.4** - *08-12-2022*
 - Swift & Xcode 14.1 version update.
 - Bug fixes.
 
-## **v1.6.3** - *20-09-202*
+## **v1.6.3** - *20-09-2022*
 - Swift & Xcode 14.0 version update.
 
-## **v1.6.2** - *08-06-202*
+## **v1.6.2** - *08-06-2022*
 - Swift & Xcode 13.4.1 version update.
 
-## **v1.6.0** - *15-04-202*
+## **v1.6.0** - *15-04-2022*
 - Issue fixes & Improvements.
 - Swift & Xcode 13.3.1 version update.
 
