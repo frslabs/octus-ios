@@ -7,6 +7,8 @@ Octus SDK uses advanced deep learning technologies for accurate and fast ID scan
 
 You can find the release history at [Changelog](CHANGELOG.md)
 
+‼ ATTENTION ‼ → BREAKING CHANGE introduced at Octus SDK `v1.6.6`. We have introduced a new license format. If you are using versions prior to `v1.6.6` and intend to update to `v1.6.6` or above please contact `support@frslabs.com` for an updated license.
+
 # Table Of Content
 - [Prerequisite](#prerequisite)
 - [iOS SDK Requirements](#requirements)
