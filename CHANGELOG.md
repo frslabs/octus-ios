@@ -1,5 +1,11 @@
 # Changelog
 
+## **v1.7.0** - *08-07-2023*
+- Update transaction API.
+
+## **v1.6.9** - *26-04-2023*
+- Swift & Xcode 14.3.1 version update.
+
 ## **v1.6.8** - *26-04-2023*
 - Swift & Xcode 14.3 version update.
 - Fixed aadhaar masking issue.
