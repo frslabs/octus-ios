@@ -61,7 +61,7 @@ You will need a valid netrc credentials to install octus from maven, which can b
 1. Create or edit .netrc file under current user's home directory
 2. Write the below lines into that file, replace <YOUR_USERNAME> and <YOUR_PASSWORD> with your credentials which is shared through email and save the file.
 ```ruby
-machine octus-ios.repo.frslabs.space
+machine www.repo2.frslabs.space
 login <YOUR_USERNAME>
 password <YOUR_PASSOWRD>
 ```
