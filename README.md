@@ -52,6 +52,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 pod 'Octus','1.7.5'
 pod 'TesseractOCRiOS', :git => 'https://github.com/gali8/Tesseract-OCR-iOS.git'
+pod 'TensorFlowLiteSwift', '2.6.0'
 ```
 
 ###### Save/Edit Netrc settings to install custom pod
