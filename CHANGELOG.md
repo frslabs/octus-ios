@@ -1,4 +1,7 @@
 # Changelog
+## **v1.7.6** - *25-11-2024*
+- Swift & Xcode 16.1 version update.
+
 ## **v1.7.5** - *09-08-2024*
 - Added Aadhaar PVC card capture and masking.
 - Bug fixes.
