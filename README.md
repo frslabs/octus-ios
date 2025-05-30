@@ -79,7 +79,12 @@ import Octus
 ```
 #### Supported Tessdata installation
 1. Download and drop ```model.trainneddata``` in tessdata folder of your project.
-2. Congratulations! 
+2. Congratulations!
+
+### Octus Bundle
+  Download and drop ```Octus.bundle``` file has to be added to your project folder to get the image assests of SDK into your App.
+### Octus PVC Aadhaar mask model 
+Download and drop ```octus_adr_mask.tflite``` file in the project for Aadhaar PVC card masking.
 
 ## Usage example
 
