@@ -1,4 +1,7 @@
 # Changelog
+## **v1.7.9** - *19-09-2025*
+- Swift & Xcode 26.0 version update.
+  
 ## **v1.7.8** - *30-07-2025*
 - Swift & Xcode 16.4 version update.
   
