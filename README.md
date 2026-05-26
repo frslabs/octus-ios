@@ -64,36 +64,6 @@ post_install do |installer|
 end
 ```
 
-
-# Octus SDK – iOS Integration
-
-## Installation
-
-Add the following configuration to your `Podfile`:
-
-```ruby
-source 'https://gitlab.com/frslabs-public/ios/octus.git'
-source 'https://github.com/CocoaPods/Specs.git'
-
-platform :ios, '13.0'
-
-target '<Your Target Name>' do
-  use_frameworks!
-
-  pod 'Octus', '1.8.4'
-  pod 'TesseractOCRiOS', '5.0.1'
-  pod 'TensorFlowLiteSwift', '2.6.0'
-end
-
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
-    end
-  end
-end
-```
-
 ## Simulator Compatibility (Apple Silicon Macs)
 
 For Apple Silicon environments (M1 / M2 / M3 Macs), some third-party dependencies used by the SDK currently have limited native ARM64 simulator support.
