@@ -85,7 +85,6 @@ pod install
 - Simulator compilation is supported using Rosetta mode.
 - Native Apple Silicon (`arm64`) simulator support currently depends on third-party library compatibility.
 
----
 ###### Save/Edit Netrc settings to install custom pod
 
 You will need a valid netrc credentials to install octus from maven, which can be obtained by contacting `support@frslabs.com`. 
