@@ -49,7 +49,7 @@ You can use [CocoaPods](http://cocoapods.org/) to install `Octus` by adding it t
 platform :ios, '13.0'
 source 'https://gitlab.com/frslabs-public/ios/octus.git'
 source 'https://github.com/CocoaPods/Specs.git'
-target 'OctusSDKApp' do
+target 'YOUR_TARGET_NAME' do
   use_frameworks!
   pod 'Octus','1.8.4'
   pod 'TesseractOCRiOS', '5.0.1'
