@@ -72,19 +72,6 @@ To enable simulator compilation, please use the following Podfile configuration:
 ### Podfile Configuration
 
 ```ruby
-source 'https://gitlab.com/frslabs-public/ios/octus.git'
-source 'https://github.com/CocoaPods/Specs.git'
-
-platform :ios, '13.0'
-
-target 'YOUR_TARGET_NAME' do
-  use_frameworks!
-
-  pod 'Octus', '1.8.4'
-  pod 'TesseractOCRiOS', '5.0.1'
-  pod 'TensorFlowLiteSwift', '2.6.0'
-end
-
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
