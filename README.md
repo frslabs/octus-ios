@@ -63,13 +63,13 @@ post_install do |installer|
   end
 end
 ```
-## Simulator Support (Apple Silicon Macs)
+##### Simulator Support (Apple Silicon Macs)
 
 Due to a limitation in the third-party dependency (`TesseractOCRiOS`), native Apple Silicon simulator builds (`arm64 simulator`) are currently not supported.
 
 To enable simulator compilation, please use the following Podfile configuration:
 
-### Podfile Configuration
+##### Podfile Configuration
 
 ```ruby
 post_install do |installer|
@@ -81,7 +81,7 @@ post_install do |installer|
 end
 ```
 
-### Apply Changes
+##### Apply Changes
 
 After updating the Podfile, run:
 
@@ -90,7 +90,7 @@ rm -rf Pods Podfile.lock
 pod install
 ```
 
-### Notes
+##### Notes
 
 - This is a temporary workaround for simulator compatibility.
 - `arm64` simulator architecture is excluded because one of the third-party dependencies does not currently support Apple Silicon simulator builds.
