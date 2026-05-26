@@ -49,11 +49,66 @@ You can use [CocoaPods](http://cocoapods.org/) to install `Octus` by adding it t
 platform :ios, '13.0'
 source 'https://gitlab.com/frslabs-public/ios/octus.git'
 source 'https://github.com/CocoaPods/Specs.git'
-use_frameworks!
-pod 'Octus','1.8.4'
-pod 'TesseractOCRiOS', :git => 'https://github.com/gali8/Tesseract-OCR-iOS.git'
-pod 'TensorFlowLiteSwift', '2.6.0'
+target 'OctusSDKApp' do
+  use_frameworks!
+  pod 'Octus','1.8.4'
+  pod 'TesseractOCRiOS', '5.0.1'
+  pod 'TensorFlowLiteSwift', '2.6.0'
+end
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+    end
+  end
+end
 ```
+## Simulator Support (Apple Silicon Macs)
+
+Due to a limitation in the third-party dependency (`TesseractOCRiOS`), native Apple Silicon simulator builds (`arm64 simulator`) are currently not supported.
+
+To enable simulator compilation, please use the following Podfile configuration:
+
+### Podfile Configuration
+
+```ruby
+source 'https://gitlab.com/frslabs-public/ios/octus.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '13.0'
+
+target 'YOUR_TARGET_NAME' do
+  use_frameworks!
+
+  pod 'Octus', '1.8.4'
+  pod 'TesseractOCRiOS', '5.0.1'
+  pod 'TensorFlowLiteSwift', '2.6.0'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+    end
+  end
+end
+```
+
+### Apply Changes
+
+After updating the Podfile, run:
+
+```bash
+rm -rf Pods Podfile.lock
+pod install
+```
+
+### Notes
+
+- This is a temporary workaround for simulator compatibility.
+- `arm64` simulator architecture is excluded because one of the third-party dependencies does not currently support Apple Silicon simulator builds.
+- Simulator execution is supported using **Rosetta (x86_64 simulator mode)**.
+- Physical iOS device builds are fully supported.
 
 ###### Save/Edit Netrc settings to install custom pod
 
