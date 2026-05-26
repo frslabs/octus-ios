@@ -63,7 +63,7 @@ post_install do |installer|
   end
 end
 ```
-##### Simulator Support (Apple Silicon Macs)
+## Simulator Support (Apple Silicon Macs)
 
 Due to a limitation in the third-party dependency (`TesseractOCRiOS`), native Apple Silicon simulator builds (`arm64 simulator`) are currently not supported.
 
