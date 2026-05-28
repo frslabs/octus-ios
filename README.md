@@ -61,9 +61,15 @@ end
 
 post_install do |installer|
 
+  simulator_x86_targets = [
+    'TesseractOCRiOS'
+  ]
+
   installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+    if simulator_x86_targets.include?(target.name)
+      target.build_configurations.each do |config|
+        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+      end
     end
   end
 
@@ -77,6 +83,24 @@ post_install do |installer|
   end
 
 end
+```
+
+Install dependencies:
+
+```bash
+pod install
+```
+
+Open the generated `.xcworkspace` file after installation.
+
+## Notes
+
+* Minimum supported iOS version: **13.0**
+* `use_frameworks!` is required.
+* `TesseractOCRiOS` requires simulator architecture exclusion for compatibility during simulator builds.
+* Simulator architecture configuration is applied to both pod targets and application targets to ensure successful simulator compilation.
+* Full SDK validation is recommended on a physical iOS device.
+
 ```
 
 Install dependencies:
