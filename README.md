@@ -47,21 +47,53 @@ You can use [CocoaPods](http://cocoapods.org/) to install `Octus` by adding it t
 
 ```ruby
 platform :ios, '13.0'
+
 source 'https://gitlab.com/frslabs-public/ios/octus.git'
 source 'https://github.com/CocoaPods/Specs.git'
+
 target 'YOUR_TARGET_NAME' do
   use_frameworks!
-  pod 'Octus','1.8.4'
+
+  pod 'Octus', '1.8.4'
   pod 'TesseractOCRiOS', '5.0.1'
   pod 'TensorFlowLiteSwift', '2.6.0'
 end
+
 post_install do |installer|
+
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
       config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
     end
   end
+
+  installer.aggregate_targets.each do |aggregate_target|
+    aggregate_target.user_project.native_targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+      end
+    end
+    aggregate_target.user_project.save
+  end
+
 end
+```
+
+Install dependencies:
+
+```bash
+pod install
+```
+
+Open the generated `.xcworkspace` file after installation.
+
+## Notes
+
+* Minimum supported iOS version: **13.0**
+* `use_frameworks!` is required.
+* Simulator architecture configuration is applied to both pod targets and app targets for successful simulator compilation.
+* Full SDK validation is recommended on a physical iOS device.
+
 ```
 
 ## Simulator Compatibility (Apple Silicon Macs)
