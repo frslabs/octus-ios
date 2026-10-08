@@ -58,30 +58,12 @@ target 'YOUR_TARGET_NAME' do
   pod 'TesseractOCRiOS', '5.0.1'
   pod 'TensorFlowLiteSwift', '2.6.0'
 end
-
 post_install do |installer|
-
-  simulator_x86_targets = [
-    'TesseractOCRiOS'
-  ]
-
-  installer.pods_project.targets.each do |target|
-    if simulator_x86_targets.include?(target.name)
+    installer.pods_project.targets.each do |target|
       target.build_configurations.each do |config|
-        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
-      end
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
     end
   end
-
-  installer.aggregate_targets.each do |aggregate_target|
-    aggregate_target.user_project.native_targets.each do |target|
-      target.build_configurations.each do |config|
-        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
-      end
-    end
-    aggregate_target.user_project.save
-  end
-
 end
 ```
 
