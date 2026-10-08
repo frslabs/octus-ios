@@ -1,7 +1,7 @@
 
 # OCTUS iOS SDK
 
-![version](https://img.shields.io/badge/version-v1.8.6-blue)
+![version](https://img.shields.io/badge/version-v1.8.7-blue)
 
 Octus SDK uses advanced deep learning technologies for accurate and fast ID scanning and OCR. Businesses can integrate the Octus SDK into native iOS Apps which comes with pre-built screens and configurations. The SDK returns the scanned images, extracted data and error codes. And as a safety measure, the SDK does not store any of the personal data or ID images that are scanned.
 
@@ -46,7 +46,7 @@ In Info.plist file add following code to allow your application to access iPhone
 You can use [CocoaPods](http://cocoapods.org/) to install `Octus` by adding it to your `Podfile`:
 
 ```ruby
-platform :ios, '13.0'
+platform :ios, '15.0'
 
 source 'https://gitlab.com/frslabs-public/ios/octus.git'
 source 'https://github.com/CocoaPods/Specs.git'
@@ -54,7 +54,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'YOUR_TARGET_NAME' do
   use_frameworks!
 
-  pod 'Octus', '1.8.6'
+  pod 'Octus', '1.8.7'
   pod 'TesseractOCRiOS', '5.0.1'
   pod 'TensorFlowLiteSwift', '2.6.0'
 end
