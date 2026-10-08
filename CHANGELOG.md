@@ -1,5 +1,8 @@
 # Changelog
-## **v1.8.6** - *14-11-2026*
+## **v1.8.7** - *08-10-2026*
+- Swift & Xcode 27.0 version
+  
+## **v1.8.6** - *14-06-2026*
 - Swift & Xcode 26.6 version with OS 26.4.1 update.
 - Bug fixes.
   
